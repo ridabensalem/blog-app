@@ -11,8 +11,10 @@ default: &default
 
 development:
   <<: *default
-  database: blog 
-  username: rida
+  adapter: postgresql
+  encoding: unicode
+  database: blog
+  username: bens
   password: ''
   host: localhost
   port: 5432
