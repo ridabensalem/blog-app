@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
-  belongs_to :user, foreign_key: 'author_id'
+  belongs_to :author, class_name: 'User'
   has_many :comments
+  has_many :likes
 
   validates :author_id, presence: true
   validates :title, presence: true
