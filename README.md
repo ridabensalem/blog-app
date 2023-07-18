@@ -19,8 +19,6 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -48,8 +46,6 @@
 
 - **[Create individual blog app ]**
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -96,11 +92,12 @@ Install this project with:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 Author1
 
-- GitHub: [@ridabensalem](https://github.com/ridabnesalem)
-- Twitter: [@coder_rida](https://twitter.com/coder_rida)
-- LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
+- GitHub: [ridabensalem](https://github.com/ridabensalem)
+- Twitter: [coder_rida](https://twitter.com/coder_rida)
+- LinkedIn: [ridabensalem](https://linkedin.com/in/ridabensalem)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
