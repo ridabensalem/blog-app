@@ -20,7 +20,6 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Usage](#usage)
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
@@ -90,7 +89,7 @@ Install this project with:
 ` cd School-library
   - Run gem install after cloning the repo
 
-### Usage
+
 
 
 
