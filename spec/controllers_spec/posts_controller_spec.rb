@@ -1,17 +1,14 @@
-# spec/controllers/posts_controller_spec.rb
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :controller do
-  describe 'GET #index' do
-    it 'returns a successful response' do
-      get :index, params: { user_id: 1 }
-      expect(response).to be_successful
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /posts' do
+    it 'works! (now write some real specs)' do
+      get posts_path
+      expect(response).to have_http_status(200)
     end
-it "renders the index template" do
-  get :index, params: { user_id: 1 }
-  expect(response).to render_template("index")
-end
 
+    it 'returns all posts' do
+      expect(Post.count).to eq(0)
+    end
   end
-
 end

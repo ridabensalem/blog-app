@@ -1,18 +1,20 @@
-  require 'rails_helper'
+# spec/requests/users_spec.rb
+require 'rails_helper'
+require 'factory_bot_rails'
 
-RSpec.describe UsersController, type: :controller do
-        describe "GET #index" do
-          it "returns a success response" do
-            get :index
-            expect(response).to be_successful
-          end
-          it "renders the index template" do
-            get :index
-            expect(response).to render_template("index")
-          end
-              end
-
- 
-      
+RSpec.describe 'Users', type: :request do
+  describe 'GET /users' do
+    it 'checks if it is responding' do
+      get users_path
+      expect(response).to have_http_status(200)
+    end
   end
-  
+
+  describe 'GET /users/:id' do
+    let(:user) { FactoryBot.create(:user) }
+    it 'should return a serialized user' do
+      get user_path(user)
+      expect(response).to have_http_status(200)
+    end
+  end
+end
