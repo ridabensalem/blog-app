@@ -3,7 +3,6 @@ require 'factory_bot_rails'
 
 RSpec.describe 'Posts', type: :request do
   before(:each) do
-    # Clean up the test database before each test
     Post.destroy_all
   end
 
@@ -25,10 +24,8 @@ RSpec.describe 'Posts', type: :request do
     it 'includes correct placeholder text in the response body' do
       get posts_path
       expect(response.body).to include('Welcome to post index page')
-      # Replace 'Welcome to post index page' with the actual placeholder text that should be in the index view.
     end
   end
-  # unit test for the show action
   describe 'GET /posts/:id' do
     let(:post) { FactoryBot.create(:post) }
 
