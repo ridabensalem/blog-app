@@ -1,7 +1,8 @@
-# spec/factories/comments.rb
 FactoryBot.define do
   factory :comment do
-    sequence(:text) { |n| "Comment #{n}" }
+    user_id { nil }
+    text { 'hi' }
+    author { nil }
     association :post
   end
 end

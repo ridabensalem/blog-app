@@ -28,6 +28,24 @@ RSpec.describe 'Posts', type: :request do
       # Replace 'Welcome to post index page' with the actual placeholder text that should be in the index view.
     end
   end
+  # unit test for the show action
+  describe 'GET /posts/:id' do
+    let(:post) { FactoryBot.create(:post) }
 
-  # Add more tests for other actions if needed.
+    it 'should return a serialized post' do
+      get post_path(post)
+      expect(response).to have_http_status(200)
+    end
+
+    it 'renders the correct template' do
+      get post_path(post)
+      expect(response).to render_template(:show)
+    end
+
+    it 'response body includes correct placeholder text' do
+      get post_path(post)
+      expect(response.body).to include('Post Details') && include('Author: ')
+      expect(response.body).to include(post.title) && include(post.text)
+    end
+  end
 end
