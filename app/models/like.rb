@@ -1,9 +1,8 @@
 class Like < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  belongs_to :post
+  belongs_to :post, class_name: 'Post'
+  after_save :update_likes_counter
 
-  validates :author_id, presence: true
-  validates :post_id, presence: true
 
   # A method that updates the likes counter for a post.
   def update_likes_counter
