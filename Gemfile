@@ -76,3 +76,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webdrivers'
 end
+
+gem 'tailwindcss-rails', '~> 2.0'
