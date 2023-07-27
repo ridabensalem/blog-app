@@ -1,10 +1,39 @@
-<h1>User Profile</h1>
-<p>Name: <%= @user.name %></p>
-<p>Total Posts: <%= @user.posts.count %></p>
+<section class="container mb-5">
+    <div class='d-flex mr-4'>
+      <div class="card m-5 text-decoration-none mr-4" style="width: 15rem; heigth: 15rem;">
+        <% if @user.photo %>
+          <img src="<%= @user.photo %>" class="rounded float-start" alt="...">
+        <% else %>
+          <p> No image found </p>
+        <% end %>
+      </div>
+    <div class="card mt-5 mb-5 --bs-dark bg-dark border border-dark-subtle" style="width: 60rem;">
+      <div class="card-body ">
+        <h1 class="card-title text-light text-decoration-none"><%= @user.name %></h1>  
+        <h6 class="card-text text-light">Number of posts: <span><%= @user.posts_counter %></span></h6>
+        <div class="card mt-5 text-light mb-5 --bs-dark bg-secondary border border-dark-subtle">
+      <div class='card-body'>
+        <h2>Bio: </h2>
+        <h6><%= @user.bio %></h6>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2>Recent Posts</h2>
-<ul>
+
+  <% counter = 1 %>
   <% @user.recent_posts.each do |post| %>
-    <li><%= post.title %> - <%= post.created_at %></li>
+  <div class="card mt-5 mb-5 --bs-dark bg-warning border border-dark-subtle" style="width: 80rem;">
+    <div class='card-body'>
+      <h3 class="card-title text-black">Post #<%= counter %></h3>
+      <h6><%= post.text %></h6>
+     
+      
+   </div>
+  </div>
+    <% counter += 1 %>
+    
   <% end %>
-</ul>
+    <%= link_to 'See all posts', user_posts_path(@user), class: "btn btn-dark d-flex justify-content-center"%>
+</section>
