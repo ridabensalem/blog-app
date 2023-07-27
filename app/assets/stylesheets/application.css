@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-details{
-    background-color: rgb(48, 141, 248);
-    color: white;
-    height: 2rem;
-    width: 2rem;
-    padding: 4px 12px;
+.btn-details {
+  background-color: rgb(48, 141, 248);
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  padding: 4px 12px;
 }
