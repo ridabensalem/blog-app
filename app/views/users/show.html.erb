@@ -1,39 +1,34 @@
-<section class="container mb-5">
-    <div class='d-flex mr-4'>
-      <div class="card m-5 text-decoration-none mr-4" style="width: 15rem; heigth: 15rem;">
-        <% if @user.photo %>
-          <img src="<%= @user.photo %>" class="rounded float-start" alt="...">
-        <% else %>
+ <div  class='user_show_container'> 
+   <div class='headline_container'>
+   <div class="image_container", style="width: 15rem; heigth: 15rem;">
+      <% if @user.photo %>
+        <img src="<%= @user.photo %>" class="" >
+      <% else %>
           <p> No image found </p>
-        <% end %>
-      </div>
-    <div class="card mt-5 mb-5 --bs-dark bg-dark border border-dark-subtle" style="width: 60rem;">
-      <div class="card-body ">
-        <h1 class="card-title text-light text-decoration-none"><%= @user.name %></h1>  
-        <h6 class="card-text text-light">Number of posts: <span><%= @user.posts_counter %></span></h6>
-        <div class="card mt-5 text-light mb-5 --bs-dark bg-secondary border border-dark-subtle">
-      <div class='card-body'>
-        <h2>Bio: </h2>
-        <h6><%= @user.bio %></h6>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <% counter = 1 %>
-  <% @user.recent_posts.each do |post| %>
-  <div class="card mt-5 mb-5 --bs-dark bg-warning border border-dark-subtle" style="width: 80rem;">
-    <div class='card-body'>
-      <h3 class="card-title text-black">Post #<%= counter %></h3>
-      <h6><%= post.text %></h6>
-     
-      
+      <% end %>
+     </div>
+     <div class="content_show_container">
+      <h1 class="">User Name: <%= @user.name %></h1>  
+        <h6 class="">Number of posts: <span><%= @user.posts_counter %></span></h6>
+     </div>
    </div>
-  </div>
-    <% counter += 1 %>
-    
-  <% end %>
-    <%= link_to 'See all posts', user_posts_path(@user), class: "btn btn-dark d-flex justify-content-center"%>
-</section>
+   <div class="user_bio">
+   <h2>Bio</h2>
+   <p><%= @user.bio %></p>   
+   </div>
+    <div class="user_posts">
+    <h2>Posts</h2>
+   
+   <% @user.recent_posts.each  do |post| %>
+     <div class='posts_list'>
+    <h3>Title:<%= post.title %></h3>
+     <%= post.text %>
+      </div>
+    <% end %>
+    <div class="user_show_button">
+        <%= link_to 'See all posts', user_posts_path(@user), class: "btn_show_posts"%>
+   </div>
+
+ </div>
+
+</div>

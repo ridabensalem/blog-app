@@ -1,21 +1,17 @@
-<h1>User profile</h1>
+  <div class='user_wrapper'>
 <% @users.each do |user|%>
-  <div class='container'>
-  <div class="row mb-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded d-flex" style="max-width: 540px;">
-     <div class="col m-4", style="width: 15rem; heigth: 15rem;">
+  <div class="user_container">
+     <div class="image_container", style="width: 15rem; heigth: 15rem;">
       <% if user.photo %>
-        <img src="<%= user.photo %>" class="rounded float-start" alt="...">
+        <img src="<%= user.photo %>" class="" >
       <% else %>
           <p> No image found </p>
       <% end %>
      </div>
-    <div class="col-md-8">
-      <div class='card-body'>
-        <h1 class="card-title text-decoration-none mt-4"><%= user.name %></h1>  
-        <h6 class="card-text ,t-2">Number of posts: <span><%= user.posts_counter %></span></h6>
+    <div class="content_container">
+        <h1 class="">User Name: <%= user.name %></h1>  
+        <h6 class="">Number of posts: <span><%= user.posts_counter %></span></h6>
         <%= link_to "See details", user_path(user), class: "btn-details" %>
        </div>
-    </div>
-  </div>
   </div>
 <% end %>
