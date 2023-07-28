@@ -17,21 +17,20 @@
     <h2>Posts</h2>
     <% @user.recent_posts.each do |post| %>
       <div class='posts_list'>
-        <h3>Title: <%= post.title %></h3>
+        <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
         <%= post.text %> <br> <br>
         Comments: <%= post.comments_counter %>
         Likes: <%= post.likes_counter %>
       </div>
       <% post.comments.each do |comment| %>
         <div class='posts_list'>
-          <h3><%= comment.text %>: <%= comment.text %></h3>
-        </div>
-      <% end %>
-      <% if post == @user.recent_posts.last %>
-      <div class='user_show_button'>
-        <%= link_to "Pagination", user_post_path(@user, post),class: "btn_show_posts" %>
+          <h3><%= @user.name %>: <%= comment.text %></h3>
         </div>
       <% end %>
     <% end %>
+  </div>
+
+  <div class="pagination_container">
+    <%= link_to "Pagination", class: "pagination" %>
   </div>
 </div>

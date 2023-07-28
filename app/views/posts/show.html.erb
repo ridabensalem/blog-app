@@ -1,24 +1,17 @@
 <div class="user_posts_details">
-    <h2>Posts</h2>
-   
-   <% @user.recent_posts.each  do |post| %>
-     <div class='posts_list'>
-    <h3>Title:<%= post.title %></h3>
-     <%= post.text %> <br> <br>
+    <h2>Post</h2>
+    <div class='posts_list'>
+        <h3>Title: <%= @post.title %></h3>
+        <%= @post.text %> 
 
-    Comments: <%= post.comments_counter %>
-     likes: <%= post.likes_counter %>
-   
-
-      </div>
-    <% end %>
-    <div>
-    <% @user.recent_posts.each  do |post| %>
-      <% post.comments.each do |comment| %>
+    </div>
+    <%# show related comments  %>
+    <div class='pots_list'>
+     <% @post.comments.each do |comment| %>
         <div class='posts_list'>
-          <h3> <%= comment.text %>:<%= comment.text %></h3>
+          <h3><%= @user.name %>: <%= comment.text %></h3>
         </div>
       <% end %>
-    <% end %>
     </div>
+
     </div>

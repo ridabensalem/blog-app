@@ -90,3 +90,12 @@
   gap: 1rem;
   padding: 1rem;
 }
+
+.pagination_container {
+  padding-top: 2rem;
+}
+
+.pagination_container a {
+  border: 3px outset #000;
+  padding: 0.5rem;
+}
