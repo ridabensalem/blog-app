@@ -1,11 +1,13 @@
 <a name="readme-top"></a>
 
+
 <div align="center">
   <br/>
 
-  <h3><b>blog app   README</b></h3>
+  <h3><b>Blog app  README</b></h3>
 
 </div>
+
 
 # 📗 Table of Contents
 
@@ -13,11 +15,14 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-
+  - [Queries screenshots](#queries)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -25,8 +30,8 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [blog app  ] <a name="about-project"></a>
-**[blog app ]**  is a Ruby on Rails application that allows users to create their own blog app  and share their thoughts with the world. Users can create, edit and delete their own blog app  posts. They can also comment on other users' blog app  posts.
+# 📖 [Blog app ] <a name="about-project"></a>
+**[Blog app]** is a ROR application that allow user to add comments posts and likes . 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,9 +48,7 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Create individual blog app ]**
-
-
+- **[Create Posts and Comments ]**
 
 
 
@@ -68,7 +71,7 @@ To get a local copy up and running, follow these steps.
 ### Setup
 
 Clone this repository to your desired folder:
-https://github.com/ridabensalem/blog-app.git
+https://github.com/ridabensalem/School-library.git
  Example commands:
 
 ```sh
@@ -83,7 +86,13 @@ Install this project with:
 ` cd School-library
   - Run gem install after cloning the repo
 
+### Run Tests
+To run test for this project
 
+```shell
+cd testing/
+rpec spec 'test_spec.rb'
+```
 
 
 
@@ -91,18 +100,18 @@ Install this project with:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 Author1
+👤 **Author1**
 
-- GitHub: [ridabensalem](https://github.com/ridabensalem)
-- Twitter: [coder_rida](https://twitter.com/coder_rida)
-- LinkedIn: [ridabensalem](https://linkedin.com/in/ridabensalem)
+- GitHub: [@ridabensalem](https://github.com/ridabnesalem)
+- Twitter: [@coder_rida](https://twitter.com/coder_rida)
+- LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Improve the UI/UX design  ]**
+- [ ] **[Add more methods to Blog app ]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
