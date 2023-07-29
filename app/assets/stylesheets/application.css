@@ -1,3 +1,8 @@
+@import "inter-font";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .user_wrapper {
   display: flex;
   flex-direction: column;
