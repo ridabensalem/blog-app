@@ -1,5 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :set_post
+  before_action :set_post, except: [:new]
+
+  def new
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
+  end
 
   def create
     @comment = @post.comments.new(comment_params)
