@@ -1,24 +1,23 @@
-# app/controllers/comments_controller.rb
 class CommentsController < ApplicationController
   before_action :set_post
 
   def create
     @comment = @post.comments.new(comment_params)
+    @comment.author = current_user
+
     if @comment.save
-      # Update comments counter for the post
       @post.update_comments_counter
-      redirect_to @post, notice: 'Comment created successfully.'
+      redirect_to user_post_path(@post.author, @post), notice: 'Comment created successfully.'
     else
-      redirect_to @post, alert: 'Failed to create the comment.'
+      redirect_to user_post_path(@post.author, @post), alert: 'Failed to create the comment.'
     end
   end
 
   def destroy
     @comment = @post.comments.find(params[:id])
     @comment.destroy
-    # Update comments counter for the post
     @post.update_comments_counter
-    redirect_to @post, notice: 'Comment deleted successfully.'
+    redirect_to user_post_path(@post.author, @post), notice: 'Comment deleted successfully.'
   end
 
   private
@@ -28,6 +27,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:author_id, :text)
+    params.require(:comment).permit(:text)
   end
 end
