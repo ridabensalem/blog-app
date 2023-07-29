@@ -1,3 +1,8 @@
+@import "inter-font";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .user_wrapper {
   display: flex;
   flex-direction: column;
@@ -98,4 +103,140 @@
 .pagination_container a {
   border: 3px outset #000;
   padding: 0.5rem;
+}
+
+/* --------------Forms ---------------- */
+.comment_container {
+  border: 1px solid red;
+}
+
+/* app/assets/stylesheets/custom.css.scss (or any other CSS file) */
+
+/* Styling for the comment form container */
+.comment-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for the comment form title */
+.comment-form-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styling for form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Styling for form labels */
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Styling for form controls (text area and input) */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical; /* Allow vertical resizing for text area */
+}
+
+/* Styling for the submit button */
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+/* Add hover and focus styles for the submit button */
+.btn:hover,
+.btn:focus {
+  background-color: #0056b3;
+}
+
+/* Add disabled style for the submit button */
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* -----Add post form  */
+
+/* app/assets/stylesheets/custom.css.scss (or any other CSS file) */
+
+/* Styling for the post form container */
+.post-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for the post form title */
+.post-form-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Styling for form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styling for form labels */
+.form-label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling for form controls (text field and text area) */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical; /* Allow vertical resizing for text area */
+}
+
+/* Styling for the submit button */
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+/* Add hover and focus styles for the submit button */
+.btn:hover,
+.btn:focus {
+  background-color: #0056b3;
+}
+
+/* Add disabled style for the submit button */
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

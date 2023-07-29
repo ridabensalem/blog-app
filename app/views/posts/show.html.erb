@@ -1,17 +1,19 @@
 <div class="user_posts_details">
-    <h2>Post</h2>
-    <div class='posts_list'>
-        <h3>Title: <%= @post.title %></h3>
-        <%= @post.text %> 
+  <h2>Post</h2>
+  <div class='posts_list'>
+    <h3>Title: <%= @post.title %></h3>
+    <%= @post.text %>
+  </div>
 
-    </div>
-    <%# show related comments  %>
-    <div class='pots_list'>
-     <% @post.comments.each do |comment| %>
-        <div class='posts_list'>
-          <h3><%= @user.name %>: <%= comment.text %></h3>
-        </div>
-      <% end %>
-    </div>
-
-    </div>
+  <%# Show related comments %>
+  <div class='posts_list'>
+    <% @post.comments.each do |comment| %>
+      <div class='posts_list'>
+        <h3><%= comment.author.name %>: <%= comment.text %></h3>
+      </div>
+    <% end %>
+  </div>
+  <div class="pagination_container">
+    <%= link_to 'Add a Comment', new_user_post_comment_path(@post.author, @post), class: 'btn btn-primary' %>
+  </div>
+</div>
