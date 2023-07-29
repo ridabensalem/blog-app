@@ -1,3 +1,17 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.text %></p>
-<p>Author: <%= @post.author&.name %></p>
+<div class="user_posts_details">
+    <h2>Post</h2>
+    <div class='posts_list'>
+        <h3>Title: <%= @post.title %></h3>
+        <%= @post.text %> 
+
+    </div>
+    <%# show related comments  %>
+    <div class='pots_list'>
+     <% @post.comments.each do |comment| %>
+        <div class='posts_list'>
+          <h3><%= @user.name %>: <%= comment.text %></h3>
+        </div>
+      <% end %>
+    </div>
+
+    </div>

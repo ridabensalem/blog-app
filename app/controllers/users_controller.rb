@@ -1,6 +1,5 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
-
   def index
     @users = User.all.order('created_at DESC')
   end

@@ -1,10 +1,34 @@
-<h1>User Profile</h1>
-<p>Name: <%= @user.name %></p>
-<p>Total Posts: <%= @user.posts.count %></p>
+ <div  class='user_show_container'> 
+   <div class='headline_container'>
+   <div class="image_container", style="width: 15rem; heigth: 15rem;">
+      <% if @user.photo %>
+        <img src="<%= @user.photo %>" class="" >
+      <% else %>
+          <p> No image found </p>
+      <% end %>
+     </div>
+     <div class="content_show_container">
+      <h1 class="">User Name: <%= @user.name %></h1>  
+        <h6 class="">Number of posts: <span><%= @user.posts_counter %></span></h6>
+     </div>
+   </div>
+   <div class="user_bio">
+   <h2>Bio</h2>
+   <p><%= @user.bio %></p>   
+   </div>
+    <div class="user_posts">
+    <h2>Posts</h2>
+   
+   <% @user.recent_posts.each  do |post| %>
+     <div class='posts_list'>
+    <h3>Title:<%= post.title %></h3>
+     <%= post.text %>
+      </div>
+    <% end %>
+    <div class="user_show_button">
+        <%= link_to 'See all posts', user_posts_path(@user), class: "btn_show_posts"%>
+   </div>
 
-<h2>Recent Posts</h2>
-<ul>
-  <% @user.recent_posts.each do |post| %>
-    <li><%= post.title %> - <%= post.created_at %></li>
-  <% end %>
-</ul>
+ </div>
+
+</div>
