@@ -42,7 +42,7 @@ RSpec.describe 'Post index page', type: :feature do
     expect(page).to have_content("Likes: #{posts.last.likes_counter}")
   end
 
-    scenario 'I can see a section for pagination if there are more posts than fit on the view' do
+  scenario 'I can see a section for pagination if there are more posts than fit on the view' do
     # Ensure that the posts on the first page are displayed (3 posts)
     expect(page).to have_selector('.posts_list', count: 3, wait: 5)
 
@@ -50,7 +50,6 @@ RSpec.describe 'Post index page', type: :feature do
     expect(page).not_to have_selector('.pagination', wait: 5)
   end
 
-  
   scenario 'When I click on a post, it redirects me to that post\'s show page' do
     click_on posts.last.title # Click on the link of the last post in the list
     expect(current_path).to eq(user_post_path(user, posts.last))
