@@ -5,7 +5,11 @@
     <%= @post.text %>
   </div>
 
-  <%# Show related comments %>
+  <div class='posts_list'>
+    <p>Comments: <%= @post.comments.count %></p>
+    <p>Likes: <%= @post.likes_counter %></p>
+  </div>
+
   <div class='posts_list'>
     <% @post.comments.each do |comment| %>
       <div class='posts_list'>
