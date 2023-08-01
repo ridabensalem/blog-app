@@ -27,5 +27,14 @@ RSpec.describe 'User show page', type: :feature do
     scenario 'I can see the users first 3 posts'
     visit user_path
     expect(page).to have_content(user.posts.first(3))
+    scenario 'Tests that assert you can see a button that lets me view all of a users posts.' do
+      visit user_path
+      expect(page).to have_content('View all posts')
+      scenario ' redirect to the users posts index page when you click on a see all posts' do
+        visit user_path
+        click_link 'View all posts'
+        expect(page).to have_content(user.posts)
+      end
+    end
   end
 end
