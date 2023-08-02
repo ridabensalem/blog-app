@@ -1,8 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    user_id { nil }
     text { 'hi' }
-    author { nil }
+    association :author, factory: :user
     association :post
   end
 end

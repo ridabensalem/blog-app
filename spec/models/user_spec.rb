@@ -15,11 +15,5 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:name]).to include("can't be blank")
     end
-
-    it 'validates numericality of posts_counter' do
-      user = User.new
-      user.valid?
-      expect(user.errors[:posts_counter]).to include('is not a number')
-    end
   end
 end

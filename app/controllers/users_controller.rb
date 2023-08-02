@@ -1,10 +1,9 @@
-# app/controllers/users_controller.rb
 class UsersController < ApplicationController
   def index
-    @users = User.all.order('created_at DESC')
+    @users = User.includes(:posts).order('created_at DESC')
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.includes(posts: :comments).find_by(id: params[:id])
   end
 end
