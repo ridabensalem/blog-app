@@ -1,17 +1,21 @@
 class RegistrationsController < ApplicationController
+  def new
+    @user = User.new
+  end
+
   def create
-    @user = User.new(user_params)
+    @user = User.new(registration_params)
+
     if @user.save
-      puts 'User created successfully'
+      redirect_to root_path, notice: 'Registration successful'
     else
-      puts 'User not created'
+      render :new
     end
   end
 
-  private
 
-  def user_params
+  def registration_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
+  
 end
-# auto fix stylelint errors 
