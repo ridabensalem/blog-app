@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post show page', type: :feature do
   let(:user) { FactoryBot.create(:user) }
   let(:post) { FactoryBot.create(:post, author: user) }
-  let!(:comments) { FactoryBot.create_list(:comment, 3, post: post, author: user) }
+  let!(:comments) { FactoryBot.create_list(:comment, 3, post:, author: user) }
 
   before do
     post.update(likes_counter: 5) # Set the initial number of likes

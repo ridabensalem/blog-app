@@ -7,7 +7,7 @@ FactoryBot.define do
 
     # Assuming you also have associated factories defined for Author, Comment, and Like.
     after(:create) do |post|
-      create_list(:comment, 5, post: post, text: 'hi', author: nil)
+      create_list(:comment, 5, post:, text: 'hi', author: nil)
     rescue StandardError
       ActiveRecord::RecordInvalid
     end
