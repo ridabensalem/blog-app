@@ -219,6 +219,11 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
+    rswag-api (2.10.1)
+      railties (>= 3.1, < 7.1)
+    rswag-ui (2.10.1)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.55.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -299,6 +304,8 @@ DEPENDENCIES
   rails (~> 7.0.6)
   rails-controller-testing
   rspec-rails
+  rswag-api
+  rswag-ui
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   shoulda-matchers

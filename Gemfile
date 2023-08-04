@@ -55,6 +55,8 @@ group :development do
   gem 'cancancan'
   gem 'devise'
   gem 'rack-cors'
+  gem 'rswag-api'
+  gem 'rswag-ui'
   gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
