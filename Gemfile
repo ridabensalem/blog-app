@@ -52,6 +52,7 @@ gem 'bootsnap', require: false
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'bcrypt'
+  gem 'cancancan'
   gem 'devise'
   gem 'rack-cors'
   gem 'web-console'
