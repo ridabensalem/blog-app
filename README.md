@@ -22,7 +22,6 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -83,7 +82,7 @@ https://github.com/ridabensalem/blog-app.git```
 
 Install this project with:
 
-` cd School-library
+` cd blog-app
   - Run gem install after cloning the repo
 
 ### Run Tests
